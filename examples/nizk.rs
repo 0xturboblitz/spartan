@@ -13,7 +13,7 @@ use ark_bn254::Fr;
 use ark_bn254::G1Projective;
 use ark_ff::PrimeField;
 use ark_std::test_rng;
-use libspartan::{InputsAssignment, Instance, SNARKGens, VarsAssignment, SNARK};
+use libspartan::{InputsAssignment, Instance, NIZKGens, VarsAssignment, NIZK};
 use merlin::Transcript;
 
 #[allow(non_snake_case)]
@@ -122,17 +122,12 @@ fn main() {
   ) = produce_r1cs::<Fr>();
 
   // produce public parameters
-  let gens = SNARKGens::<G1Projective>::new(num_cons, num_vars, num_inputs, num_non_zero_entries);
-
-  // create a commitment to the R1CS instance
-  let (comm, decomm) = SNARK::encode(&inst, &gens);
+  let gens = NIZKGens::<G1Projective>::new(num_cons, num_vars, num_inputs);
 
   // produce a proof of satisfiability
-  let mut prover_transcript = Transcript::new(b"snark_example");
-  let proof = SNARK::prove(
+  let mut prover_transcript = Transcript::new(b"nizk_example");
+  let proof = NIZK::prove(
     &inst,
-    &comm,
-    &decomm,
     assignment_vars,
     &assignment_inputs,
     &gens,
@@ -140,9 +135,9 @@ fn main() {
   );
 
   // verify the proof of satisfiability
-  let mut verifier_transcript = Transcript::new(b"snark_example");
+  let mut verifier_transcript = Transcript::new(b"nizk_example");
   assert!(proof
-    .verify(&comm, &assignment_inputs, &mut verifier_transcript, &gens)
+    .verify(&inst, &assignment_inputs, &mut verifier_transcript, &gens)
     .is_ok());
   println!("proof verification successful!");
 }

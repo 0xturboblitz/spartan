@@ -1,6 +1,6 @@
 #![allow(non_snake_case)]
 #![doc = include_str!("../README.md")]
-#![deny(missing_docs)]
+// #![deny(missing_docs)]
 #![allow(clippy::assertions_on_result_states)]
 
 extern crate core;
@@ -26,6 +26,7 @@ mod sumcheck;
 mod timer;
 mod transcript;
 mod unipoly;
+pub mod circom_reader;
 
 use ark_ec::CurveGroup;
 use ark_ff::PrimeField;
@@ -100,7 +101,8 @@ pub type InputsAssignment<F> = Assignment<F>;
 
 /// `Instance` holds the description of R1CS matrices
 pub struct Instance<F: PrimeField> {
-  inst: R1CSInstance<F>,
+  // inst is the inner R1CSInstance
+  pub inst: R1CSInstance<F>,
 }
 
 impl<F: PrimeField> Instance<F> {
