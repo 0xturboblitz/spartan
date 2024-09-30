@@ -478,8 +478,8 @@ impl<G: CurveGroup> NIZKGens<G> {
 /// `NIZK` holds a proof produced by Spartan NIZK
 #[derive(CanonicalSerialize, CanonicalDeserialize, Debug)]
 pub struct NIZK<G: CurveGroup> {
-  r1cs_sat_proof: R1CSProof<G>,
-  r: (Vec<G::ScalarField>, Vec<G::ScalarField>),
+  pub r1cs_sat_proof: R1CSProof<G>,
+  pub r: (Vec<G::ScalarField>, Vec<G::ScalarField>),
 }
 
 impl<G: CurveGroup> NIZK<G> {

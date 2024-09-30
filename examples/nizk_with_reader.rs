@@ -5,6 +5,7 @@ use libspartan::{InputsAssignment, NIZKGens, VarsAssignment, NIZK, circom_reader
 use merlin::Transcript;
 use std::env::current_dir;
 use std::path::PathBuf;
+use std::time::Instant;
 
 #[allow(non_snake_case)]
 fn main() {
@@ -40,6 +41,7 @@ fn main() {
   }
   let inputs = InputsAssignment::new(&inputs).unwrap();
 
+  let start_proving = Instant::now();
   let proof = NIZK::prove(
     &spartan_inst,
     assignment.clone(),
@@ -47,11 +49,23 @@ fn main() {
     &gens,
     &mut prover_transcript,
   );
+  let proving_time = start_proving.elapsed();
+  println!("Proving time: {:?}", proving_time);
+
+  use ark_serialize::{CanonicalSerialize, Compress};
+
+  // log proof size
+  let proof_size = proof.r1cs_sat_proof.serialized_size(Compress::Yes);
+  println!("Proof size: {} bytes", proof_size);
 
   // verify the proof of satisfiability
   let mut verifier_transcript = Transcript::new(b"nizk_example");
+  let start_verification = Instant::now();
   assert!(proof
     .verify(&spartan_inst, &inputs, &mut verifier_transcript, &gens)
     .is_ok());
+  let verification_time = start_verification.elapsed();
+  println!("Verification time: {:?}", verification_time);
+
   println!("proof verification successful!");
 }
