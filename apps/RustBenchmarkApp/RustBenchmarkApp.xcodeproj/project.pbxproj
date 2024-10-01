@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		056E3B9C2CAA769000BF173C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E3B9B2CAA769000BF173C /* AppDelegate.swift */; };
+		056E3B9E2CAA769000BF173C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E3B9D2CAA769000BF173C /* SceneDelegate.swift */; };
+		056E3BA02CAA769000BF173C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E3B9F2CAA769000BF173C /* ViewController.swift */; };
+		056E3BA32CAA769000BF173C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056E3BA12CAA769000BF173C /* Main.storyboard */; };
+		056E3BA62CAA769000BF173C /* RustBenchmarkApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 056E3BA42CAA769000BF173C /* RustBenchmarkApp.xcdatamodeld */; };
+		056E3BA82CAA769100BF173C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056E3BA72CAA769100BF173C /* Assets.xcassets */; };
+		056E3BAB2CAA769100BF173C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056E3BA92CAA769100BF173C /* LaunchScreen.storyboard */; };
+		056E3BBC2CAB208000BF173C /* librust_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056E3BBB2CAB208000BF173C /* librust_lib.a */; };
+		057A8B932CABC9AB005A87AB /* prove_rsa_65537_sha256.wtns in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B8B2CABC9AB005A87AB /* prove_rsa_65537_sha256.wtns */; };
+		057A8B942CABC9AB005A87AB /* vc_and_disclose.r1cs in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B8C2CABC9AB005A87AB /* vc_and_disclose.r1cs */; };
+		057A8B952CABC9AB005A87AB /* rsa.r1cs in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B8D2CABC9AB005A87AB /* rsa.r1cs */; };
+		057A8B962CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.wtns in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B8E2CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.wtns */; };
+		057A8B972CABC9AB005A87AB /* vc_and_disclose.wtns in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B8F2CABC9AB005A87AB /* vc_and_disclose.wtns */; };
+		057A8B982CABC9AB005A87AB /* rsa.wtns in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B902CABC9AB005A87AB /* rsa.wtns */; };
+		057A8B992CABC9AB005A87AB /* prove_rsa_65537_sha256.r1cs in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B912CABC9AB005A87AB /* prove_rsa_65537_sha256.r1cs */; };
+		057A8B9A2CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.r1cs in Resources */ = {isa = PBXBuildFile; fileRef = 057A8B922CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.r1cs */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		056E3B982CAA769000BF173C /* RustBenchmarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustBenchmarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		056E3B9B2CAA769000BF173C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		056E3B9D2CAA769000BF173C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		056E3B9F2CAA769000BF173C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		056E3BA22CAA769000BF173C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		056E3BA52CAA769000BF173C /* RustBenchmarkApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RustBenchmarkApp.xcdatamodel; sourceTree = "<group>"; };
+		056E3BA72CAA769100BF173C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		056E3BAA2CAA769100BF173C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		056E3BAC2CAA769100BF173C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		056E3BB22CAA7B3300BF173C /* RustBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RustBridge.h; sourceTree = "<group>"; };
+		056E3BBA2CAB1FD400BF173C /* RustBenchmarkApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RustBenchmarkApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		056E3BBB2CAB208000BF173C /* librust_lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librust_lib.a; path = "rust_lib/target/aarch64-apple-ios/release/librust_lib.a"; sourceTree = "<group>"; };
+		057A8B8B2CABC9AB005A87AB /* prove_rsa_65537_sha256.wtns */ = {isa = PBXFileReference; lastKnownFileType = file; path = prove_rsa_65537_sha256.wtns; sourceTree = "<group>"; };
+		057A8B8C2CABC9AB005A87AB /* vc_and_disclose.r1cs */ = {isa = PBXFileReference; lastKnownFileType = file; path = vc_and_disclose.r1cs; sourceTree = "<group>"; };
+		057A8B8D2CABC9AB005A87AB /* rsa.r1cs */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsa.r1cs; sourceTree = "<group>"; };
+		057A8B8E2CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.wtns */ = {isa = PBXFileReference; lastKnownFileType = file; path = prove_ecdsa_secp256r1_sha256.wtns; sourceTree = "<group>"; };
+		057A8B8F2CABC9AB005A87AB /* vc_and_disclose.wtns */ = {isa = PBXFileReference; lastKnownFileType = file; path = vc_and_disclose.wtns; sourceTree = "<group>"; };
+		057A8B902CABC9AB005A87AB /* rsa.wtns */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsa.wtns; sourceTree = "<group>"; };
+		057A8B912CABC9AB005A87AB /* prove_rsa_65537_sha256.r1cs */ = {isa = PBXFileReference; lastKnownFileType = file; path = prove_rsa_65537_sha256.r1cs; sourceTree = "<group>"; };
+		057A8B922CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.r1cs */ = {isa = PBXFileReference; lastKnownFileType = file; path = prove_ecdsa_secp256r1_sha256.r1cs; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		056E3B952CAA769000BF173C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				056E3BBC2CAB208000BF173C /* librust_lib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		056E3B8F2CAA769000BF173C = {
+			isa = PBXGroup;
+			children = (
+				056E3BB32CAA7B4F00BF173C /* Resources */,
+				056E3B9A2CAA769000BF173C /* RustBenchmarkApp */,
+				056E3B992CAA769000BF173C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		056E3B992CAA769000BF173C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				056E3B982CAA769000BF173C /* RustBenchmarkApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		056E3B9A2CAA769000BF173C /* RustBenchmarkApp */ = {
+			isa = PBXGroup;
+			children = (
+				056E3B9B2CAA769000BF173C /* AppDelegate.swift */,
+				056E3B9D2CAA769000BF173C /* SceneDelegate.swift */,
+				056E3B9F2CAA769000BF173C /* ViewController.swift */,
+				056E3BA12CAA769000BF173C /* Main.storyboard */,
+				056E3BA72CAA769100BF173C /* Assets.xcassets */,
+				056E3BA92CAA769100BF173C /* LaunchScreen.storyboard */,
+				056E3BAC2CAA769100BF173C /* Info.plist */,
+				056E3BA42CAA769000BF173C /* RustBenchmarkApp.xcdatamodeld */,
+				056E3BB22CAA7B3300BF173C /* RustBridge.h */,
+				056E3BBA2CAB1FD400BF173C /* RustBenchmarkApp-Bridging-Header.h */,
+				056E3BBB2CAB208000BF173C /* librust_lib.a */,
+			);
+			path = RustBenchmarkApp;
+			sourceTree = "<group>";
+		};
+		056E3BB32CAA7B4F00BF173C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				057A8B922CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.r1cs */,
+				057A8B8E2CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.wtns */,
+				057A8B912CABC9AB005A87AB /* prove_rsa_65537_sha256.r1cs */,
+				057A8B8B2CABC9AB005A87AB /* prove_rsa_65537_sha256.wtns */,
+				057A8B8D2CABC9AB005A87AB /* rsa.r1cs */,
+				057A8B902CABC9AB005A87AB /* rsa.wtns */,
+				057A8B8C2CABC9AB005A87AB /* vc_and_disclose.r1cs */,
+				057A8B8F2CABC9AB005A87AB /* vc_and_disclose.wtns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		056E3B972CAA769000BF173C /* RustBenchmarkApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 056E3BAF2CAA769100BF173C /* Build configuration list for PBXNativeTarget "RustBenchmarkApp" */;
+			buildPhases = (
+				056E3B942CAA769000BF173C /* Sources */,
+				056E3B952CAA769000BF173C /* Frameworks */,
+				056E3B962CAA769000BF173C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RustBenchmarkApp;
+			productName = RustBenchmarkApp;
+			productReference = 056E3B982CAA769000BF173C /* RustBenchmarkApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		056E3B902CAA769000BF173C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					056E3B972CAA769000BF173C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 056E3B932CAA769000BF173C /* Build configuration list for PBXProject "RustBenchmarkApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 056E3B8F2CAA769000BF173C;
+			productRefGroup = 056E3B992CAA769000BF173C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				056E3B972CAA769000BF173C /* RustBenchmarkApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		056E3B962CAA769000BF173C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				056E3BAB2CAA769100BF173C /* LaunchScreen.storyboard in Resources */,
+				056E3BA82CAA769100BF173C /* Assets.xcassets in Resources */,
+				056E3BA32CAA769000BF173C /* Main.storyboard in Resources */,
+				057A8B932CABC9AB005A87AB /* prove_rsa_65537_sha256.wtns in Resources */,
+				057A8B992CABC9AB005A87AB /* prove_rsa_65537_sha256.r1cs in Resources */,
+				057A8B942CABC9AB005A87AB /* vc_and_disclose.r1cs in Resources */,
+				057A8B962CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.wtns in Resources */,
+				057A8B972CABC9AB005A87AB /* vc_and_disclose.wtns in Resources */,
+				057A8B952CABC9AB005A87AB /* rsa.r1cs in Resources */,
+				057A8B9A2CABC9AB005A87AB /* prove_ecdsa_secp256r1_sha256.r1cs in Resources */,
+				057A8B982CABC9AB005A87AB /* rsa.wtns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		056E3B942CAA769000BF173C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				056E3BA02CAA769000BF173C /* ViewController.swift in Sources */,
+				056E3B9C2CAA769000BF173C /* AppDelegate.swift in Sources */,
+				056E3B9E2CAA769000BF173C /* SceneDelegate.swift in Sources */,
+				056E3BA62CAA769000BF173C /* RustBenchmarkApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		056E3BA12CAA769000BF173C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				056E3BA22CAA769000BF173C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		056E3BA92CAA769100BF173C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				056E3BAA2CAA769100BF173C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		056E3BAD2CAA769100BF173C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		056E3BAE2CAA769100BF173C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		056E3BB02CAA769100BF173C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5B29R5LYHQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RustBenchmarkApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RustBenchmarkApp/rust_lib/target/aarch64-apple-ios/release",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proofofpassport.rustbench.RustBenchmarkApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RustBenchmarkApp/RustBenchmarkApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		056E3BB12CAA769100BF173C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5B29R5LYHQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RustBenchmarkApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RustBenchmarkApp/rust_lib/target/aarch64-apple-ios/release",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proofofpassport.rustbench.RustBenchmarkApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RustBenchmarkApp/RustBenchmarkApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		056E3B932CAA769000BF173C /* Build configuration list for PBXProject "RustBenchmarkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056E3BAD2CAA769100BF173C /* Debug */,
+				056E3BAE2CAA769100BF173C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		056E3BAF2CAA769100BF173C /* Build configuration list for PBXNativeTarget "RustBenchmarkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				056E3BB02CAA769100BF173C /* Debug */,
+				056E3BB12CAA769100BF173C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		056E3BA42CAA769000BF173C /* RustBenchmarkApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				056E3BA52CAA769000BF173C /* RustBenchmarkApp.xcdatamodel */,
+			);
+			currentVersion = 056E3BA52CAA769000BF173C /* RustBenchmarkApp.xcdatamodel */;
+			path = RustBenchmarkApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 056E3B902CAA769000BF173C /* Project object */;
+}

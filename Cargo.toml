@@ -1,5 +1,5 @@
 [package]
-name = "ark-spartan"
+name = "libspartan"
 # sync up with Arkwork's version
 version = "0.4.0"
 authors = [
