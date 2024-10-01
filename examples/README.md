@@ -1,0 +1,1 @@
+/usr/bin/time -l cargo run --example nizk_with_reader --release -- --nocapture

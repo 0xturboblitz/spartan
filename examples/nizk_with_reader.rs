@@ -10,7 +10,7 @@ use std::time::Instant;
 #[allow(non_snake_case)]
 fn main() {
   let r1cs_path = "examples/vc_and_disclose/vc_and_disclose.r1cs";
-  let witness_path = "examples/vc_and_disclose/witness.wtns";
+  let witness_path = "examples/vc_and_disclose/vc_and_disclose.wtns";
   let num_pub_inputs = 10;
 
   let circom_r1cs_path = PathBuf::from(r1cs_path);

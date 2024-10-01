@@ -4,9 +4,9 @@ use super::Instance;
 // use ff::PrimeField;
 // use secq256k1::AffinePoint;
 // use secq256k1::FieldBytes;
-use ark_bn254::{Fr, G1Projective, G1Affine, G2Projective, G2Affine};
+use ark_bn254::{Fr, G1Projective};
 use ark_ec::CurveGroup;
-use ark_ff::{PrimeField, BigInt};
+use ark_ff::PrimeField;
 use ark_serialize::CanonicalDeserialize;
 
 
