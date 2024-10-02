@@ -32,10 +32,11 @@ thiserror = "1.0"
 
 rand_chacha = { version = "0.3.0", default-features = false }
 
-ark-ec = { version = "^0.4.0", default-features = false }
-ark-ff = { version = "^0.4.0", default-features = false }
-ark-std = { version = "^0.4.0", default-features = false }
-ark-serialize =  { version = "^0.4.0", default-features = false, features = [ "derive" ] }
+
+ark-ec = { version = "^0.4.0", default-features = false  }
+ark-ff = { version = "^0.4.0", default-features = false  }
+ark-std = { version = "^0.4.0", default-features = false  }
+ark-serialize =  { version = "^0.4.0", default-features = false  }
 
 ark-bls12-381 = { version = "^0.4.0", default-features = false, features = [ "curve" ] }
 ark-bn254 = { version = "^0.4.0", default-features = false, features = [ "curve" ] }
@@ -66,11 +67,18 @@ name = "nizk"
 harness = false
 
 [features]
-# default = ["curve25519-dalek/simd_backend"]
 default = [ 
     "ark-ec/parallel",
     "ark-ff/parallel",
-    "ark-std/parallel",    
+    "ark-std/parallel",
+    "ark-serialize/derive"
+]
+android = [
+    "ark-ec/std",
+    "ark-ff/std",
+    "ark-std/std",
+    "ark-serialize/derive",
+    "ark-serialize/std"
 ]
 multicore = ["rayon"]
 profile = []

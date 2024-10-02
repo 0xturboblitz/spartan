@@ -10,3 +10,13 @@ cargo build --target aarch64-apple-ios --release
 - Configure code signing
 - Run the app in Xcode
 
+### Android
+
+- Add artifacts to in `apps/android/app/src/main/assets`
+- Change paths in `apps/android/app/src/main/java/com/example/rustbenchmarkapp/MainActivity.kt`
+```
+cd android/rust_lib
+cargo ndk -t arm64-v8a -o ../app/src/main/jniLibs build --release --no-default-features --features android
+cd ..
+./gradlew installDebug
+```
