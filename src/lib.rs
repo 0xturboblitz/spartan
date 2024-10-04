@@ -55,7 +55,7 @@ pub struct ComputationDecommitment<F> {
 /// `Assignment` holds an assignment of values to either the inputs or variables in an `Instance`
 #[derive(Clone)]
 pub struct Assignment<F> {
-  assignment: Vec<F>,
+  pub assignment: Vec<F>,
 }
 
 impl<F: PrimeField> Assignment<F> {
@@ -205,6 +205,10 @@ impl<F: PrimeField> Instance<F> {
 
     Ok(Instance { inst })
   }
+
+  pub fn from_r1cs_instance(inst: R1CSInstance<F>) -> Instance<F> {
+    Instance { inst }
+  }  
 
   /// Checks if a given R1CSInstance is satisfiable with a given variables and inputs assignments
   pub fn is_sat(
