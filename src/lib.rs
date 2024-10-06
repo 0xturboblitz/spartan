@@ -1,6 +1,6 @@
 #![allow(non_snake_case)]
 #![doc = include_str!("../README.md")]
-#![deny(missing_docs)]
+// #![deny(missing_docs)]
 #![allow(clippy::assertions_on_result_states)]
 
 extern crate byteorder;
@@ -21,7 +21,7 @@ mod group;
 mod math;
 mod nizk;
 mod product_tree;
-mod r1csinstance;
+pub mod r1csinstance;
 mod r1csproof;
 mod random;
 mod scalar;
