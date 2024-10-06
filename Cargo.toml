@@ -18,9 +18,11 @@ license-file = "LICENSE"
 keywords = ["zkSNARKs", "cryptography", "proofs"]
 
 [dependencies]
-merlin = "3.0.0"
+# merlin = "3.0.0"
+merlin = { git = "https://github.com/zk-passport/merlin", branch = "main" }
 digest = "0.8.1"
-sha3 = "0.8.2"
+# sha3 = "0.8.2"
+tiny-keccak = { git = "https://github.com/sp1-patches/tiny-keccak", branch = "patch-v2.0.2", default-features = false, features = ["shake"] }
 rayon = { version = "1.3.0", optional = true }
 subtle = { version = "2.4", default-features = false }
 rand = { version = "0.7.3", default-features = false }

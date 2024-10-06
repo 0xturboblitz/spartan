@@ -7,7 +7,7 @@ extern crate core;
 extern crate digest;
 extern crate merlin;
 extern crate rand;
-extern crate sha3;
+// extern crate sha3;
 
 #[cfg(feature = "multicore")]
 extern crate rayon;

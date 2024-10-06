@@ -3,7 +3,9 @@ use ark_ec::VariableBaseMSM;
 use ark_std::rand::SeedableRng;
 use digest::{ExtendableOutput, Input};
 use rand_chacha::ChaCha20Rng;
-use sha3::Shake256;
+// use sha3::Shake256;
+use tiny_keccak::{Shake, Hasher};
+
 use std::io::Read;
 
 #[derive(Debug)]
@@ -15,13 +17,21 @@ pub struct MultiCommitGens<G> {
 
 impl<G: CurveGroup> MultiCommitGens<G> {
   pub fn new(n: usize, label: &[u8]) -> Self {
-    let mut shake = Shake256::default();
-    shake.input(label);
+    // let mut shake = Shake256::default();
+    // shake.input(label);
+    let mut shake = Shake::v256();
+    shake.update(label);
+
     let mut buf = vec![];
     G::generator().serialize_compressed(&mut buf).unwrap();
-    shake.input(buf);
 
-    let mut reader = shake.xof_result();
+    // shake.input(buf);
+    shake.update(&buf);
+
+    let mut output = [0u8; 32];
+    shake.finalize(&mut output);
+    let mut reader = &output[..];
+
     let mut seed = [0u8; 32];
     reader.read_exact(&mut seed).unwrap();
     let mut rng = ChaCha20Rng::from_seed(seed);
