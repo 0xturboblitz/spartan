@@ -55,7 +55,7 @@ pub struct ComputationDecommitment {
 }
 
 /// `Assignment` holds an assignment of values to either the inputs or variables in an `Instance`
-#[derive(Clone)]
+#[derive(Clone, Serialize, Deserialize)]
 pub struct Assignment {
   assignment: Vec<Scalar>,
 }
@@ -112,6 +112,7 @@ pub type VarsAssignment = Assignment;
 pub type InputsAssignment = Assignment;
 
 /// `Instance` holds the description of R1CS matrices and a hash of the matrices
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Instance {
   inst: R1CSInstance,
   digest: Vec<u8>,
