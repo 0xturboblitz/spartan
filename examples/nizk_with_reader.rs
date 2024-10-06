@@ -6,6 +6,7 @@ use merlin::Transcript;
 use std::env::current_dir;
 use std::path::PathBuf;
 use std::time::Instant;
+use ark_serialize::{CanonicalSerialize, Compress};
 
 #[allow(non_snake_case)]
 fn main() {
@@ -35,11 +36,11 @@ fn main() {
   // produce a proof of satisfiability
   let mut prover_transcript = Transcript::new(b"nizk_example");
 
-  let mut inputs = vec![Fr::from(0); spartan_inst.inst.get_num_inputs()];
+  let mut inputsMap = vec![Fr::from(0); spartan_inst.inst.get_num_inputs()];
   for i in 0..spartan_inst.inst.get_num_inputs() {
-      inputs[i] = witness[i];
+    inputsMap[i] = witness[i];
   }
-  let inputs = InputsAssignment::new(&inputs).unwrap();
+  let inputs = InputsAssignment::new(&inputsMap).unwrap();
 
   let start_proving = Instant::now();
   let proof = NIZK::prove(
@@ -52,7 +53,37 @@ fn main() {
   let proving_time = start_proving.elapsed();
   println!("Proving time: {:?}", proving_time);
 
-  use ark_serialize::{CanonicalSerialize, Compress};
+  // Serialize the proof, instance, and inputs
+  // let mut serialized_proof = Vec::new();
+  // proof.serialize_compressed(&mut serialized_proof).unwrap();
+
+  // let mut serialized_spartan_inst = Vec::new();
+  // spartan_inst.inst.serialize_compressed(&mut serialized_spartan_inst).unwrap();
+
+  // let mut serialized_inputs = Vec::new();
+  // inputsMap.serialize_compressed(&mut serialized_inputs).unwrap();
+  
+  let mut spartan_inst_bytes = Vec::new();
+    spartan_inst
+        .inst
+        .serialize_compressed(&mut spartan_inst_bytes)
+        .unwrap();
+  std::fs::write("spartan_inst.bin", &spartan_inst_bytes).unwrap();
+
+  // Serialize proof
+  let mut proof_bytes = Vec::new();
+  proof.serialize_compressed(&mut proof_bytes).unwrap();
+  std::fs::write("proof.bin", &proof_bytes).unwrap();
+
+  // Serialize inputs
+  let mut inputs_bytes = Vec::new();
+  inputs
+      .assignment
+      .serialize_compressed(&mut inputs_bytes)
+      .unwrap();
+  std::fs::write("inputs.bin", &inputs_bytes).unwrap();
+
+  println!("Serialized spartan_inst, proof, and inputs to files.");
 
   // log proof size
   let proof_size = proof.r1cs_sat_proof.serialized_size(Compress::Yes);
