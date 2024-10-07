@@ -3,8 +3,8 @@ use super::scalar::{Scalar, ScalarBytes, ScalarBytesFromScalar};
 use core::borrow::Borrow;
 use core::ops::{Mul, MulAssign};
 
-pub type GroupElement = curve25519_dalek::ristretto::RistrettoPoint;
-pub type CompressedGroup = curve25519_dalek::ristretto::CompressedRistretto;
+pub type GroupElement = curve25519_dalek_ng::ristretto::RistrettoPoint;
+pub type CompressedGroup = curve25519_dalek_ng::ristretto::CompressedRistretto;
 
 pub trait CompressedGroupExt {
   type Group;
@@ -12,7 +12,7 @@ pub trait CompressedGroupExt {
 }
 
 impl CompressedGroupExt for CompressedGroup {
-  type Group = curve25519_dalek::ristretto::RistrettoPoint;
+  type Group = curve25519_dalek_ng::ristretto::RistrettoPoint;
   fn unpack(&self) -> Result<Self::Group, ProofVerifyError> {
     self
       .decompress()
@@ -21,7 +21,7 @@ impl CompressedGroupExt for CompressedGroup {
 }
 
 pub const GROUP_BASEPOINT_COMPRESSED: CompressedGroup =
-  curve25519_dalek::constants::RISTRETTO_BASEPOINT_COMPRESSED;
+  curve25519_dalek_ng::constants::RISTRETTO_BASEPOINT_COMPRESSED;
 
 impl<'b> MulAssign<&'b Scalar> for GroupElement {
   fn mul_assign(&mut self, scalar: &'b Scalar) {
@@ -105,7 +105,7 @@ impl VartimeMultiscalarMul for GroupElement {
     J::Item: Borrow<Self>,
     Self: Clone,
   {
-    use curve25519_dalek::traits::VartimeMultiscalarMul;
+    use curve25519_dalek_ng::traits::VartimeMultiscalarMul;
     <Self as VartimeMultiscalarMul>::vartime_multiscalar_mul(
       scalars
         .into_iter()

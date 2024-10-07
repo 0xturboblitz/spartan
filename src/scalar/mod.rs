@@ -1,7 +1,7 @@
 mod ristretto255;
 
 pub type Scalar = ristretto255::Scalar;
-pub type ScalarBytes = curve25519_dalek::scalar::Scalar;
+pub type ScalarBytes = curve25519_dalek_ng::scalar::Scalar;
 
 pub trait ScalarFromPrimitives {
   fn to_scalar(self) -> Scalar;
